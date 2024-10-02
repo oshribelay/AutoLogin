@@ -87,8 +87,4 @@ Your credentials are stored securely using Chrome's `storage.sync` API. No exter
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 
