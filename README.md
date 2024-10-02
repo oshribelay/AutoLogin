@@ -1,93 +1,92 @@
-University Login Autofill Chrome Extension
-A Chrome extension that automatically fills in your university website login credentials (username, password, and ID number) and logs you in with a single click! It saves you time by securely storing your credentials and automatically submitting the login form.
+# 🌐 University Login Autofill Extension
 
+This Chrome extension automatically fills your **username**, **password**, and **ID number** on your university login page and submits the form. Skip the hassle of manual login and save time!
 
-Banner Image Placeholder
+![Autofill Demo](https://via.placeholder.com/800x200.png?text=Autofill+Extension+Demo)
 
-Features
-Autofills username, password, and ID number on the login page.
-Automatically clicks the login button after filling credentials.
-Securely saves login details using Chrome Storage API.
-Easy-to-use setup form for entering credentials.
-🛠️ Installation Guide
-1. Clone the Repository
-First, clone the repository from GitHub to your local machine:
+## 🚀 Features
 
-bash
-Copy code
-git clone https://github.com/yourusername/university-login-autofill.git
-cd university-login-autofill
-2. Load the Extension in Chrome
-Open Chrome and go to chrome://extensions/.
+- **Autofill Credentials**: Automatically enters your username, password, and ID number.
+- **Auto-Submit**: Submits the login form for you after filling.
+- **Secure Storage**: Your login details are safely stored in Chrome's storage.
 
-Turn on Developer Mode (toggle is in the upper right corner).
+## 🎨 Design Overview
 
-Click Load Unpacked and select the folder where you cloned the repository.
+The extension consists of two main parts:
+1. **Popup Interface**: A form where you input your login credentials.
+2. **Autofill Script**: Automatically fills and submits the login form.
 
+### File Structure
 
-Loading the extension in Chrome
-
-3. Enter Your Login Details
-After loading the extension, click on the extension icon in the toolbar. A popup will appear, asking you to input your login details.
-
-Username: Your university username.
-Password: Your university password.
-ID Number: Your university ID number.
-Once entered, your credentials will be saved securely for future use.
-
-🔧 How It Works
-Chrome Storage API: User credentials (username, password, ID number) are stored using the chrome.storage.sync API, ensuring that they are securely saved within Chrome’s storage environment.
-
-Content Script: The extension injects a content script (content.js) into your university's login page. It retrieves the stored credentials and autofills the login form fields. The script then automatically submits the form to log you in.
-
-Popup Form: Users can easily manage and update their credentials through the popup form that appears when clicking the extension icon.
-
-📂 File Structure
-plaintext
-Copy code
-university-login-autofill/
+```plaintext
+university-login-autofill-extension/
 │
-├── manifest.json        # Chrome extension manifest file
-├── popup.html           # Popup form for entering login credentials
-├── popup.js             # Logic for saving credentials to Chrome storage
-├── content.js           # Autofill script that runs on the university login page
-└── README.md            # Project readme file
-📸 Screenshots
-Popup Form:
+├── manifest.json       # Chrome extension manifest
+├── popup.html          # HTML popup for entering credentials
+├── popup.js            # JavaScript for saving credentials to Chrome storage
+├── content.js          # JavaScript for autofilling and submitting the form
+└── README.md           # This documentation
+## 📥 Installation
 
-The popup form for entering credentials.
+### Step 1: Clone the Repository
+First, clone the repository to your local machine:
 
-Autofill in Action:
+```bash
+git clone https://github.com/oshribelay/AutoLogin.git
 
-Autofilling the login form automatically.
+### Step 2: Open Chrome Extensions Page
+1. Open Chrome and go to `chrome://extensions/`.
+2. Enable **Developer Mode** (toggle in the top-right corner).
 
-🚀 Usage
-Once the extension is installed and you've entered your credentials:
+### Step 3: Load the Extension
+1. Click **Load unpacked**.
+2. Select the folder where you cloned this repository.
+3. The extension will now appear in your Chrome extensions.
 
-Navigate to your university's login page.
-The extension will automatically fill in the username, password, and ID number fields.
-It will then automatically submit the form, logging you into the website.
-No more typing your login details every time!
+### Step 4: Enter Your Login Details
+1. Click the extension icon in the Chrome toolbar.
+2. Enter your **username**, **password**, and **ID number** in the popup.
+3. Click **Save**.
 
-🧑‍💻 Development
-If you want to make changes or extend the functionality, here’s how to get started:
+The extension is now configured to autofill your login information on your university's login page.
 
-Clone the repo:
+## ⚙️ How It Works
 
-bash
-Copy code
-git clone https://github.com/oshribelay/UniLoginAutoLogin.git
-Navigate into the project directory:
+- **Popup Form**: Users input their credentials into the popup form, and this data is stored in Chrome's `storage.sync`.
 
-bash
-Copy code
-cd university-login-autofill
-Modify the content.js or popup.js files as needed.
+- **Autofill Script**: When the user navigates to the university's login page, the extension retrieves the saved credentials and automatically fills the form.
 
-Reload the extension by going to chrome://extensions/, clicking on "Reload" next to your extension.
+- **Auto-Submit**: Once the form is filled, the extension automatically submits it.
 
-🔐 Security
-This extension stores your credentials securely using Chrome's chrome.storage.sync API, which keeps your data stored locally and can sync it across devices if you have Chrome sync enabled. We recommend not sharing your stored credentials or leaving your machine unattended while logged into your browser.
+---
 
-📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 🛠️ Development
+
+### Requirements
+- Chrome browser
+- Basic understanding of JavaScript and HTML
+
+### Modifying the Extension
+
+If you need to customize the behavior of the extension:
+
+- Modify `content.js` to change how the form is autofilled or submitted.
+- Modify `popup.js` if you need to add more fields or improve the logic of saving credentials.
+
+To reload the extension after making changes:
+1. Go to `chrome://extensions/`.
+2. Click **Reload** next to the extension.
+
+---
+
+## 🔒 Security
+
+Your credentials are stored securely using Chrome's `storage.sync` API. No external service can access this data. Be cautious when sharing your extension or using it on sensitive accounts.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
