@@ -18,7 +18,7 @@ The extension consists of two main parts:
 
 ### File Structure
 
-```plaintext
+```
 university-login-autofill-extension/
 │
 ├── manifest.json       # Chrome extension manifest
@@ -26,6 +26,7 @@ university-login-autofill-extension/
 ├── popup.js            # JavaScript for saving credentials to Chrome storage
 ├── content.js          # JavaScript for autofilling and submitting the form
 └── README.md           # This documentation
+```
 ## 📥 Installation
 
 ### Step 1: Clone the Repository
@@ -33,6 +34,7 @@ First, clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/oshribelay/AutoLogin.git
+```
 
 ### Step 2: Open Chrome Extensions Page
 1. Open Chrome and go to `chrome://extensions/`.
