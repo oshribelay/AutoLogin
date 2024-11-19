@@ -1,12 +1,12 @@
 window.onload = function () {
   chrome.storage.sync.get(["username", "password", "id"], (items) => {
     if (items.username && items.password && items.id) {
-      document.querySelector("input[name=p_user]").value = items.username;
-      document.querySelector("input[name=p_sisma]").value = items.password;
-      document.querySelector("input[name=p_mis_student]").value = items.id;
+      document.querySelector("input[id=Ecom_User_ID]").value = items.username;
+      document.querySelector("input[id=Ecom_Password]").value = items.password;
+      document.querySelector("input[id=Ecom_User_Pid]").value = items.id;
 
       // Automatically submit the form after filling in the details
-      document.querySelector("form").submit();
+      document.getElementById("loginButton").click();
     } else {
       console.log("no items found in storage!");
     }
