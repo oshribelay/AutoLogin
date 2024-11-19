@@ -34,6 +34,8 @@ First, clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/oshribelay/AutoLogin.git
+cd to project directory
+git checkout openu
 ```
 
 ### Step 2: Open Chrome Extensions Page
